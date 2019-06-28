@@ -100,6 +100,7 @@ brew install zopfli
 brew install yarn
 brew install zsh
 brew cask install visual-studio-code
+brew cask install webstorm
 brew cask install google-chrome
 brew cask install figma
 brew cask install slack
