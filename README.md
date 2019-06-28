@@ -125,6 +125,16 @@ autoload -U promptinit; promptinit
 prompt pure
 ```
 
+Install Z:
+
+```bash
+# github.com/rupa/z   - oh how i love you
+git clone https://github.com/rupa/z.git ~/z
+chmod +x ~/z/z.sh
+# consider reusing your current .z file if possible. it's painful to rebuild :)
+# z is hooked up in .bash_profile
+```
+
 ## Author
 
 | [![twitter/mathias](http://gravatar.com/avatar/24e08a9ea84deb17ae121074d0f17125?s=70)](http://twitter.com/mathias "Follow @mathias on Twitter") |
