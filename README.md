@@ -67,28 +67,6 @@ Install xcode command line tools:
 xcode-select --install
 ```
 
-Install NVM:
-
-```bash
-cd ~/
-git clone https://github.com/nvm-sh/nvm.git .nvm
-cd ~/.nvm
-git checkout v0.34.0
-. nvm.s
-```
-
-Now add these lines to your ~/.bashrc, ~/.profile, or ~/.zshrc file to have it automatically sourced upon login: (you may have to add to more than one of the above files)
-
-```bash
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-```
-
-```bash
-nvm install node
-```
-
 ### Install Homebrew formulae
 
 Install Homebrew:
@@ -129,10 +107,35 @@ Install Z:
 
 ```bash
 # github.com/rupa/z   - oh how i love you
+cd ~/
 git clone https://github.com/rupa/z.git ~/z
 chmod +x ~/z/z.sh
 # consider reusing your current .z file if possible. it's painful to rebuild :)
 # z is hooked up in .bash_profile
+```
+
+## Install Node version manager
+
+Install NVM:
+
+```bash
+cd ~/
+git clone https://github.com/nvm-sh/nvm.git .nvm
+cd ~/.nvm
+git checkout v0.34.0
+. nvm.sh
+```
+
+Now add these lines to your ~/.bashrc, ~/.profile, or ~/.zshrc file to have it automatically sourced upon login: (you may have to add to more than one of the above files, zsh is the default for Stacc X)
+
+```bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+```
+
+```bash
+nvm install node
 ```
 
 ## Author
