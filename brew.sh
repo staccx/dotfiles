@@ -27,10 +27,10 @@ brew install bash
 brew install bash-completion2
 
 # Switch to using brew-installed bash as default shell
-if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
-  echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
-  chsh -s "${BREW_PREFIX}/bin/bash";
-fi;
+# if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
+#   echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
+#   chsh -s "${BREW_PREFIX}/bin/bash";
+# fi;
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
@@ -95,6 +95,15 @@ brew install ssh-copy-id
 brew install tree
 brew install vbindiff
 brew install zopfli
+
+# Custom stuff, remove if you want:
+brew install yarn
+brew install zsh
+brew cask install visual-studio-code
+brew cask install google-chrome
+brew cask install figma
+brew cask install slack
+brew cask install hyper
 
 # Remove outdated versions from the cellar.
 brew cleanup
