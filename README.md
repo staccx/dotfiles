@@ -59,7 +59,43 @@ When setting up a new Mac, you may want to set some sensible macOS defaults:
 ./.macos
 ```
 
+### Install NVM
+
+Install xcode command line tools:
+
+```bash
+xcode-select --install
+```
+
+Install NVM:
+
+```bash
+cd ~/
+git clone https://github.com/nvm-sh/nvm.git .nvm
+cd ~/.nvm
+git checkout v0.34.0
+. nvm.s
+```
+
+Now add these lines to your ~/.bashrc, ~/.profile, or ~/.zshrc file to have it automatically sourced upon login: (you may have to add to more than one of the above files)
+
+```bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+```
+
+```bash
+nvm install node
+```
+
 ### Install Homebrew formulae
+
+Install Homebrew:
+
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
 When setting up a new Mac, you may want to install some common [Homebrew](https://brew.sh/) formulae (after installing Homebrew, of course):
 
@@ -68,6 +104,26 @@ When setting up a new Mac, you may want to install some common [Homebrew](https:
 ```
 
 Some of the functionality of these dotfiles depends on formulae installed by `brew.sh`. If you don’t plan to run `brew.sh`, you should look carefully through the script and manually install any particularly important ones. A good example is Bash/Git completion: the dotfiles use a special version from Homebrew.
+
+### Set up zsh
+
+Install oh-my-zsh:
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+Set `ZSH_THEME=""` in your `.zshrc` to disable oh-my-zsh themes.
+
+Install [Pure prompt](https://github.com/sindresorhus/pure):
+
+```bash
+yarn global add pure-prompt
+
+# .zshrc
+autoload -U promptinit; promptinit
+prompt pure
+```
 
 ## Author
 
